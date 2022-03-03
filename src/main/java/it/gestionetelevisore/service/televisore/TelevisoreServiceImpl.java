@@ -45,4 +45,10 @@ public class TelevisoreServiceImpl implements TelevisoreService{
 		return televisoreDAO.update(input);
 	}
 
+	@Override
+	public List<Televisore> trovaInBaseAllaRicerca(Televisore input) throws Exception {
+		// televisoreDAO.setConnection(MyConnection.getConnection());
+		return televisoreDAO.findByExample(input);
+	}
+
 }

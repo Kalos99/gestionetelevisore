@@ -13,5 +13,6 @@ public interface TelevisoreService {
 	public List<Televisore> mostraTutti() throws Exception;
 	public int elimina(Televisore input) throws Exception;
 	public int aggiorna(Televisore input) throws Exception;
+	public List<Televisore> trovaInBaseAllaRicerca(Televisore input) throws Exception;
 
 }

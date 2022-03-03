@@ -3,6 +3,8 @@ package it.gestionetelevisore.dao;
 import java.sql.Connection;
 import java.util.List;
 
+import it.gestionetelevisore.model.Televisore;
+
 public interface IBaseDAO<T> {
 
 	
@@ -15,6 +17,8 @@ public interface IBaseDAO<T> {
 	public int insert(T input) throws Exception;
 
 	public int delete(T input) throws Exception;
+	
+	public List<T> findByExample(T input) throws Exception;
 
 	// questo mi serve per la injection della connection
 	public void setConnection(Connection connection);

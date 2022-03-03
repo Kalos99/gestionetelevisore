@@ -62,4 +62,23 @@ public class TelevisoreDAOImpl implements TelevisoreDAO{
 		this.connection = connection;	
 	}
 
+	@Override
+	public List<Televisore> findByExample(Televisore input) throws Exception {
+		if(input == null) {
+			throw new Exception("Valore di input non ammesso");
+		}
+		List<Televisore> result = new ArrayList<>();
+		List<Televisore> listaDiTuttiITelevisori = this.list();		
+		for (Televisore televisoreItem : listaDiTuttiITelevisori) {
+			if(televisoreItem.getMarca().startsWith(input.getMarca()) 
+					&& televisoreItem.getModello().startsWith(input.getModello()) 
+					&& televisoreItem.getPrezzo() >= input.getPrezzo() 
+					&& televisoreItem.getNumeroPollici() >= input.getNumeroPollici() 
+					&& televisoreItem.getCodice().startsWith(input.getCodice())) {
+			
+				result.add(televisoreItem);
+			}
+		}
+		return result;
+	}
 }

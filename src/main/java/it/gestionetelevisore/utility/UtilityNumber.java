@@ -5,7 +5,7 @@ public class UtilityNumber {
 		try {
 			return Integer.parseInt(daConvertire);
 		} catch (NumberFormatException e) {
-			return null;
+			return 0;
 		}
 	}
 }
