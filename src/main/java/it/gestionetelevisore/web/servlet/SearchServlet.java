@@ -31,8 +31,7 @@ public class SearchServlet extends HttpServlet {
 
 		try {
 			Televisore modelloPerRicerca = new Televisore(marcaDaPagina, modelloDaPagina, UtilityNumber.parseFromStringToInt(prezzoDaPagina), UtilityNumber.parseFromStringToInt(numeroPolliciDaPagina), codiceDaPagina);
-			request.setAttribute("listTelevisoriCheSoddisfanoICriteriDiRicerca",
-					MyServiceFactory.getTelevisoreServiceInstance().trovaInBaseAllaRicerca(modelloPerRicerca));
+			request.setAttribute("listTelevisori", MyServiceFactory.getTelevisoreServiceInstance().trovaInBaseAllaRicerca(modelloPerRicerca));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

@@ -33,7 +33,7 @@
 			</tr>
 		</thead>
 		
-		<% List<Televisore> listaDaServlet = (List<Televisore>)request.getAttribute("listTelevisoriCheSoddisfanoICriteriDiRicerca");
+		<% List<Televisore> listaDaServlet = (List<Televisore>)request.getAttribute("listTelevisori");
 							for(Televisore televisoreItem : listaDaServlet){
 				%>
 				<tr>
