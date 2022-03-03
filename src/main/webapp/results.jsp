@@ -49,7 +49,7 @@
 		<%	}%>
 	
 		<tr>
-			<th>
+			<th colspan = 4>
 				<a class ="center" href=PrepareInsertServlet>Inserisci nuovo televisore</a>
 			</th>
 		</tr>
